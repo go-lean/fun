@@ -21,6 +21,7 @@ type (
 )
 
 func New(steps ...Step) *Chain {
+
 	return &Chain{
 		steps: steps,
 	}
