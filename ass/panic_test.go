@@ -1,4 +1,6 @@
 /*
+	Copyright (c) 2023 go-lean
+
 	This software is licensed under the MIT License.
 	The full license agreement can be found in the LICENSE file.
 */
