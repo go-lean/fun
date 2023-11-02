@@ -16,7 +16,8 @@ type (
 		steps []Step
 	}
 
-	Step    func(r *http.Request, next Handler) resp.Result
+	Step func(r *http.Request, next Handler) resp.Result
+
 	Handler func(r *http.Request) resp.Result
 )
 
@@ -28,11 +29,13 @@ func New(steps ...Step) *Chain {
 }
 
 func (c *Chain) Add(steps ...Step) *Chain {
+
 	c.steps = append(c.steps, steps...)
 	return c
 }
 
 func (c *Chain) Merge(other *Chain) *Chain {
+
 	c.steps = append(c.steps, other.steps...)
 	return c
 }
